@@ -27,23 +27,37 @@ export const LoginLabel = styled.label`
     line-height: 1.2;
     color: #ffffff;
     font-weight: 500;
-`
+`;
 export const LoginInput = styled.input`
-    width: 230px;
+    width: 280px;
     height: 20px;
     margin-left: 20px;
     outline: none;
     border: 1px solid #1083eb8a;
     border-radius: 5px;
-`
 
+    &:hover{
+    background-color: #5510eb89;
+    }
+    &:focus {
+    background-color: #5510eb89;
+    }
+`;
 
+export const LoginBtn = styled.button`
+    padding: 5px 15px;
+    border: 1px solid #19013188;
+    border-radius: 5px;
+    background-color: #faf2ff;
+    color: #220153ab;
+    margin: 30px auto;
 
-// .inputLogin:hover,
-// .inputLogin:focus {
-//   background-color: #1083eb8a;
-// }
-// .inputLogin:hover .loginForm,
-// .inputLogin:focus .loginForm {
-//   color: #1083eb8a;
-// }
+    &:hover{
+        background-color: #1083eb8a;
+        color: #ffffff;
+        }
+    &:focus {
+        background-color: #1083eb8a;
+        color: #ffffff;
+        }
+`;

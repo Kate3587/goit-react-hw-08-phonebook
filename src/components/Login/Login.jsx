@@ -4,7 +4,7 @@ import { logIn } from 'reduxe/Authorization/AuthOperetions';
 
 import {
   LoginSection, LoginContainer, LoginForm, LoginLabel,
-LoginInput} from './Login.styled';
+LoginInput, LoginBtn} from './Login.styled';
 
 
 export const Login = () => {
@@ -35,6 +35,20 @@ export const Login = () => {
     <LoginSection>
       <LoginContainer>
         <LoginForm onSubmit={handleSubmit}>
+          
+          <LoginLabel>
+            Email
+            <LoginInput
+              onChange={hendleChange}
+              type="email"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              placeholder="exampel@gmail.com"
+              required
+              id="email"
+              value={email}
+            />
+          </LoginLabel>
           <LoginLabel>
             Password
             <LoginInput
@@ -49,20 +63,7 @@ export const Login = () => {
               value={password}
             />
           </LoginLabel>
-          <LoginLabel>
-            Email
-            <LoginInput
-              onChange={hendleChange}
-              type="email"
-              name="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-              placeholder="exampel@gmail.com"
-              required
-              id="email"
-              value={email}
-            />
-          </LoginLabel>
-          <button type="submit">Enter</button>
+          <LoginBtn type="submit">Enter</LoginBtn>
         </LoginForm>
       </LoginContainer>
     </LoginSection>

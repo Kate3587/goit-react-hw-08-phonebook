@@ -7,16 +7,16 @@ import { deleteContactsData } from '../../reduxe/contacts/contactsOperations';
 import { getFilteredContacts } from '../../reduxe/selectors';
 import {ItemName, ContactBtn} from './ContactList.styled';
 
-const ContactList = ({contacts}) => {
+const ContactList = () => {
 
-//     const filterForUsers = useSelector(getFilteredContacts);
-//     const dispatch = useDispatch();
+    const filterForUsers = useSelector(getFilteredContacts);
+    const dispatch = useDispatch();
 
-//     const onDeleteUsers = id => {
-//    dispatch(deleteContactsData(id));
-//   };
+    const onDeleteUsers = id => {
+   dispatch(deleteContactsData(id));
+  };
     
-const dispatch = useDispatch();
+// const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchContacts());

@@ -10,7 +10,7 @@ export const Menu = () => {
   const name = useSelector(authSelectors.getUserName);
   return (
     <MenuContainer>
-      <MessageText>Welcome, {name}!</MessageText>
+      <MessageText>Hello, {name} 👋</MessageText>
       <MenuBtn
         type="button"
         onClick={() => dispatch(logOut())}

@@ -1,20 +1,25 @@
 import ContactForm from 'components/ContactForm';
 import Filter from 'components/Filter';
-import { Audio } from 'react-loader-spinner';
+// import { Audio } from 'react-loader-spinner';
 import { fetchContactsData } from 'reduxe/contacts/contactsOperations';
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-import { ContactsSection, ContactsWrapp, ContactsLoading } from './ContactsPage.styled';
+// import { getIsLoading, getError } from 'reduxe/selectors';
+
+import {
+  ContactsSection, ContactsWrapp,
+  // ContactsLoading
+} from './ContactsPage.styled';
 
 
-const { getIsLoading, getError } = require('../../reduxe/selectors');
+// const { getIsLoading, getError } = require('reduxe/selectors');
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  // const isLoading = useSelector(getIsLoading);
+  // const error = useSelector(getError);
 
   useEffect(() => {
     dispatch(fetchContactsData());
@@ -23,7 +28,7 @@ const ContactsPage = () => {
     <ContactsSection>
       <ContactsWrapp>
         <div>
-          {isLoading && (
+          {/* {isLoading && (
             <ContactsLoading>
               <Audio
                 height="80"
@@ -35,7 +40,7 @@ const ContactsPage = () => {
               />
             </ContactsLoading>
           )}
-          {error && <ContactsLoading>{error}</ContactsLoading>}
+          {error && <ContactsLoading>{error}</ContactsLoading>} */}
           <h1>Phonebook</h1>
           <ContactForm />
         </div>

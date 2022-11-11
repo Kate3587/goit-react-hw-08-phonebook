@@ -2,20 +2,20 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addContactsData } from '../../reduxe/contacts/contactsOperations';
-import { fetchContacts } from "services/Api/Api";
+// import { fetchContacts } from "services/Api/Api";
+import { getContacts } from "reduxe/selectors";
 
 // import { nanoid } from 'nanoid';
 import {PhoneForm, FormLabel, FormInput, FormBtn} from './ContactForm.styled'
 
 const ContactForm = () => {
 
-  const dispatch = useDispatch();
-
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
   // const contacts = useSelector(state => state.contacts.items);
-  const contacts = useSelector(fetchContacts);
+  const contacts = useSelector(getContacts);
+  const dispatch = useDispatch();
 
   const onSubmit = (name, number) => dispatch(addContactsData({ name, number }));
 
@@ -37,7 +37,7 @@ const ContactForm = () => {
   
   const handleSubmit = event => {
     event.preventDefault();
-    if (contacts.some(contact => contact.name === name)) {
+    if (contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
       return alert(`${name} is already in contacts`);
     }
     onSubmit(name, number);

@@ -2,16 +2,16 @@ import { Button } from 'components/MainButton/MainButton';
 import { useDispatch } from 'react-redux';
 
 import PropTypes from 'prop-types';
-import { deleteContact } from 'redux/contacts/contacts-operation';
+import { deleteContactsData } from 'reduxe/contacts/contactsOperations';
 
 export const Contacts = ({ contact }) => {
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(contact.id));
+  const handleDelete = () => dispatch(deleteContactsData(contact.id));
   return (
     <>
       <p>{contact.name}:</p>
       <p>{contact.number}</p>
-      <Button onClick={handleDelete}>Remove contact</Button>
+      <Button onClick={handleDelete}>Delete contact</Button>
     </>
   );
 };

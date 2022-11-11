@@ -29,7 +29,7 @@ export const RegistrLabel = styled.label`
     font-weight: 500;
 `;
 export const RegistrInput = styled.input`
-   width: 230px;
+   width: 280px;
     height: 20px;
     margin-left: 20px;
     outline: none;
@@ -38,10 +38,10 @@ export const RegistrInput = styled.input`
 `;
 export const RegistrBtn = styled.button`
     padding: 5px 15px;
-    border: 1px solid #1083eb8a;
+    border: 1px solid #19013188;
     border-radius: 5px;
-    background-color: transparent;
-    color: #1083eb8a;
+    background-color: #faf2ff;
+    color: #220153ab;
     margin: 30px auto;
 
     &:hover{
@@ -55,13 +55,3 @@ export const RegistrBtn = styled.button`
 `;
 
 
-
-
-// .inputRegister:hover,
-// .inputRegister:focus {
-//   background-color: #1083eb8a;
-// }
-// .inputRegister:hover .registerForm,
-// .inputRegister:focus .registerForm {
-//   color: #1083eb8a;
-// }
