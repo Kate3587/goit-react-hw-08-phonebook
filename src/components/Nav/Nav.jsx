@@ -10,27 +10,36 @@ export const Navigation = () => {
   const isLoggedIn = useSelector(authSelectors.getLoggedIn);
   return (
     <NavWrapp>
-      <NavThumb>
-        <NavLink to="/">
-          Home
+      
+      <NavLink to="/">
+        <NavThumb>
+           Home
+        </NavThumb>
+         
         </NavLink>
-        {isLoggedIn && (
-          <NavLink to="/contacts">
+      {isLoggedIn && (
+        <NavLink to="/contacts">
+          <NavThumb>
             Contacts
+          </NavThumb>
           </NavLink>
         )}
-      </NavThumb>
+      
       {isLoggedIn ? (
         <Menu />
       ) : (
-        <NavThumb>
-          <NavLink to="/register">
-            Registration
+        <>
+            <NavLink to="/register">
+              <NavThumb>
+                Registration
+              </NavThumb>
           </NavLink>
-          <NavLink to="/login">
-            Log in
+            <NavLink to="/login">
+              <NavThumb>
+                Log in
+              </NavThumb>
           </NavLink>
-        </NavThumb>
+        </>
       )}
     </NavWrapp>
   );

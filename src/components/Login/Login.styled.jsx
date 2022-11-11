@@ -23,7 +23,7 @@ export const LoginForm = styled.form`
     transform: scale(1.02);
 `;
 export const LoginLabel = styled.label`
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.2;
     color: #ffffff;
     font-weight: 500;
@@ -33,8 +33,9 @@ export const LoginInput = styled.input`
     height: 20px;
     margin-left: 20px;
     outline: none;
-    border: 1px solid #1083eb8a;
+    border: 1px solid #1085eb9c;
     border-radius: 5px;
+    padding: 3px 5px;
 
     &:hover{
     background-color: #5510eb89;
@@ -42,6 +43,7 @@ export const LoginInput = styled.input`
     &:focus {
     background-color: #5510eb89;
     }
+
 `;
 
 export const LoginBtn = styled.button`
@@ -53,7 +55,7 @@ export const LoginBtn = styled.button`
     margin: 30px auto;
 
     &:hover{
-        background-color: #1083eb8a;
+        background-color: #379bf389;
         color: #ffffff;
         }
     &:focus {

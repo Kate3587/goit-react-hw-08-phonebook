@@ -4,6 +4,7 @@ export const getIsLoading = state => state.isLoading;
 export const getError = state => state.error;
 export const getFilter = state => state.contacts.filter.filter;
 
+
 export const getContactsFilter = createSelector(
   [getContacts, getFilter],
   (contacts, filter) => {
@@ -13,10 +14,3 @@ export const getContactsFilter = createSelector(
     );
   }
 );
-
-// export const getFilteredContacts = state =>
-//   state.contacts.items.filter(item =>
-//     item.name.toLowerCase().includes(state.filter.filter.toLowerCase())
-//   );
-// export const getFilter = state => state.filter.filter;
-

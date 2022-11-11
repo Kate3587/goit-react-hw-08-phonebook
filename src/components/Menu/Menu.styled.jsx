@@ -7,9 +7,11 @@ export const MessageText = styled.span`
      margin-right: 20px;
 
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 24;
+  font-size: 22;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.3;
+
+  color: #2258adac;
 `;
 export const MenuBtn = styled.button`
     padding: 6px 15px;

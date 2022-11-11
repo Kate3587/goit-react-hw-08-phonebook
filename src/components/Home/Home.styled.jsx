@@ -12,7 +12,7 @@ export const HomeMainTitle = styled.h1`
     font-weight: 800;
     font-size: 60px;
     line-height: 1.9;
-    color: #e21414;
+    color: #f6f8ff;
 `;
 
 

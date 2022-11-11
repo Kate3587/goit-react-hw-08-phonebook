@@ -43,7 +43,7 @@ export const Registration = () => {
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-              placeholder="Alex"
+              placeholder="Your Name"
               required
               id="name"
               value={name}
@@ -68,8 +68,8 @@ export const Registration = () => {
             <RegistrInput
               type="password"
               name="password"
-              minLength="8"
-              placeholder="8 characters minimum"
+              minLength="5"
+              placeholder="5 characters minimum"
               required
               id="password"
               value={password}

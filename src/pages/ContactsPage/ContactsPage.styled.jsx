@@ -20,3 +20,9 @@ export const ContactsLoading = styled.div`
     align-items: center;
     margin-top: 150px;
 `;
+export const MainText = styled.h1`
+    color: #0b042add
+`;
+export const ContactsText = styled.h2`
+    color: #1d0c49bc;
+`

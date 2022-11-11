@@ -55,15 +55,15 @@ export const Login = () => {
               onChange={hendleChange}
               type="password"
               name="password"
-              minLength="8"
+              minLength="5"
               autoComplete="off"
-              placeholder="8 characters minimum"
+              placeholder="5 characters minimum"
               required
               id="password"
               value={password}
             />
           </LoginLabel>
-          <LoginBtn type="submit">Enter</LoginBtn>
+          <LoginBtn type="submit">Log in</LoginBtn>
         </LoginForm>
       </LoginContainer>
     </LoginSection>

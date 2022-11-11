@@ -23,7 +23,7 @@ export const RegistrForm = styled.form`
     transform: scale(1.02);
 `
 export const RegistrLabel = styled.label`
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.2;
     color: #ffffff;
     font-weight: 500;
@@ -35,6 +35,7 @@ export const RegistrInput = styled.input`
     outline: none;
     order: 1px solid #1083eb8a;
     border-radius: 5px; 
+    padding: 3px 5px;
 `;
 export const RegistrBtn = styled.button`
     padding: 5px 15px;

@@ -1,31 +1,25 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/contacts/contacts-operation';
+import { fetchContactsData } from '../../reduxe/contacts/contactsOperations';
 
 import { deleteContactsData } from '../../reduxe/contacts/contactsOperations';
-import { getFilteredContacts } from '../../reduxe/selectors';
 import {ItemName, ContactBtn} from './ContactList.styled';
 
-const ContactList = () => {
-
-    const filterForUsers = useSelector(getFilteredContacts);
+const ContactList = ({ contacts }) => {
     const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContactsData());
+  }, [dispatch]);
 
     const onDeleteUsers = id => {
    dispatch(deleteContactsData(id));
   };
-    
-// const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
 
     return (
         <ul>
-        {filterForUsers.map(({ name, number, id }) => (
+        {contacts.map(({id, name, number}) => (
             <div
                 key={id}>
                 <ItemName>{name}: {number}</ItemName>
