@@ -1,15 +1,16 @@
-import { Navigation } from 'components/Navigation/Navigation.jsx';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+import { Navigation } from 'components/Nav/Nav';
+import { AppBarContainer, AppBarWrapp } from './AppBar.styled';
 
 const AppBar = () => {
   return (
     <>
-      <header className={s.header}>
-        <div className={s.headerContainer}>
+      <AppBarContainer>
+        <AppBarWrapp>
           <Navigation />
-        </div>
-      </header>
+        </AppBarWrapp>
+      </AppBarContainer>
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
