@@ -15,8 +15,6 @@ const ContactForm = () => {
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
-  const onSubmit = (name, number) => dispatch(addContactsData({ name, number }));
-
   const handleChange = event => {
     
     const { value, name } = event.target;
@@ -38,7 +36,6 @@ const ContactForm = () => {
     if (contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
       return alert(`${name} is already in contacts`);
     }
-    onSubmit(name, number);
     dispatch(addContactsData({ name, number, id: nanoid() }));
     setName('');
     setNumber('');
